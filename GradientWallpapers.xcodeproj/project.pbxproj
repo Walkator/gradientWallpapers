@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		127F1DA92A34EE680070BEB9 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F1DA82A34EE680070BEB9 /* Array+Additions.swift */; };
+		127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F1DAA2A34EE8A0070BEB9 /* UIColor+Additions.swift */; };
+		1280E9562A2C98FF006F5F7A /* GradientWallpapersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9552A2C98FF006F5F7A /* GradientWallpapersApp.swift */; };
+		1280E9582A2C98FF006F5F7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9572A2C98FF006F5F7A /* ContentView.swift */; };
+		1280E95A2A2C9901006F5F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280E9592A2C9901006F5F7A /* Assets.xcassets */; };
+		1280E95D2A2C9901006F5F7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1280E95C2A2C9901006F5F7A /* Preview Assets.xcassets */; };
+		1280E9672A2C9901006F5F7A /* GradientWallpapersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9662A2C9901006F5F7A /* GradientWallpapersTests.swift */; };
+		1280E9712A2C9901006F5F7A /* GradientWallpapersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9702A2C9901006F5F7A /* GradientWallpapersUITests.swift */; };
+		1280E9732A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9722A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift */; };
+		12EFB00A2A2C9F0C00A334C4 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0092A2C9F0C00A334C4 /* TimeView.swift */; };
+		12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00C2A2CA81700A334C4 /* RingEffect.swift */; };
+		12EFB00F2A2CA83C00A334C4 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00E2A2CA83C00A334C4 /* Ring.swift */; };
+		12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1280E9632A2C9901006F5F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1280E94A2A2C98FF006F5F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1280E9512A2C98FF006F5F7A;
+			remoteInfo = GradientWallpapers;
+		};
+		1280E96D2A2C9901006F5F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1280E94A2A2C98FF006F5F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1280E9512A2C98FF006F5F7A;
+			remoteInfo = GradientWallpapers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		127F1DA82A34EE680070BEB9 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		127F1DAA2A34EE8A0070BEB9 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		1280E9522A2C98FF006F5F7A /* GradientWallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientWallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1280E9552A2C98FF006F5F7A /* GradientWallpapersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersApp.swift; sourceTree = "<group>"; };
+		1280E9572A2C98FF006F5F7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1280E9592A2C9901006F5F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1280E95C2A2C9901006F5F7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1280E9622A2C9901006F5F7A /* GradientWallpapersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientWallpapersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1280E9662A2C9901006F5F7A /* GradientWallpapersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersTests.swift; sourceTree = "<group>"; };
+		1280E96C2A2C9901006F5F7A /* GradientWallpapersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientWallpapersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1280E9702A2C9901006F5F7A /* GradientWallpapersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersUITests.swift; sourceTree = "<group>"; };
+		1280E9722A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12EFB0092A2C9F0C00A334C4 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		12EFB00C2A2CA81700A334C4 /* RingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingEffect.swift; sourceTree = "<group>"; };
+		12EFB00E2A2CA83C00A334C4 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1280E94F2A2C98FF006F5F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E95F2A2C9901006F5F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E9692A2C9901006F5F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		127F1DA72A34EE4D0070BEB9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				127F1DA82A34EE680070BEB9 /* Array+Additions.swift */,
+				127F1DAA2A34EE8A0070BEB9 /* UIColor+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		127F1DAC2A34EEE80070BEB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1280E9492A2C98FF006F5F7A = {
+			isa = PBXGroup;
+			children = (
+				1280E9542A2C98FF006F5F7A /* GradientWallpapers */,
+				1280E9652A2C9901006F5F7A /* GradientWallpapersTests */,
+				1280E96F2A2C9901006F5F7A /* GradientWallpapersUITests */,
+				1280E9532A2C98FF006F5F7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1280E9532A2C98FF006F5F7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1280E9522A2C98FF006F5F7A /* GradientWallpapers.app */,
+				1280E9622A2C9901006F5F7A /* GradientWallpapersTests.xctest */,
+				1280E96C2A2C9901006F5F7A /* GradientWallpapersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1280E9542A2C98FF006F5F7A /* GradientWallpapers */ = {
+			isa = PBXGroup;
+			children = (
+				127F1DA72A34EE4D0070BEB9 /* Extensions */,
+				127F1DAC2A34EEE80070BEB9 /* View */,
+				12EFB00B2A2CA7D600A334C4 /* Models */,
+				12EFB0082A2C9EF700A334C4 /* Components */,
+				1280E9552A2C98FF006F5F7A /* GradientWallpapersApp.swift */,
+				1280E9572A2C98FF006F5F7A /* ContentView.swift */,
+				1280E9592A2C9901006F5F7A /* Assets.xcassets */,
+				1280E95B2A2C9901006F5F7A /* Preview Content */,
+			);
+			path = GradientWallpapers;
+			sourceTree = "<group>";
+		};
+		1280E95B2A2C9901006F5F7A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1280E95C2A2C9901006F5F7A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1280E9652A2C9901006F5F7A /* GradientWallpapersTests */ = {
+			isa = PBXGroup;
+			children = (
+				1280E9662A2C9901006F5F7A /* GradientWallpapersTests.swift */,
+			);
+			path = GradientWallpapersTests;
+			sourceTree = "<group>";
+		};
+		1280E96F2A2C9901006F5F7A /* GradientWallpapersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1280E9702A2C9901006F5F7A /* GradientWallpapersUITests.swift */,
+				1280E9722A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift */,
+			);
+			path = GradientWallpapersUITests;
+			sourceTree = "<group>";
+		};
+		12EFB0082A2C9EF700A334C4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				12EFB0092A2C9F0C00A334C4 /* TimeView.swift */,
+				12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		12EFB00B2A2CA7D600A334C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12EFB00C2A2CA81700A334C4 /* RingEffect.swift */,
+				12EFB00E2A2CA83C00A334C4 /* Ring.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1280E9512A2C98FF006F5F7A /* GradientWallpapers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1280E9762A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapers" */;
+			buildPhases = (
+				1280E94E2A2C98FF006F5F7A /* Sources */,
+				1280E94F2A2C98FF006F5F7A /* Frameworks */,
+				1280E9502A2C98FF006F5F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradientWallpapers;
+			productName = GradientWallpapers;
+			productReference = 1280E9522A2C98FF006F5F7A /* GradientWallpapers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1280E9612A2C9901006F5F7A /* GradientWallpapersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1280E9792A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapersTests" */;
+			buildPhases = (
+				1280E95E2A2C9901006F5F7A /* Sources */,
+				1280E95F2A2C9901006F5F7A /* Frameworks */,
+				1280E9602A2C9901006F5F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1280E9642A2C9901006F5F7A /* PBXTargetDependency */,
+			);
+			name = GradientWallpapersTests;
+			productName = GradientWallpapersTests;
+			productReference = 1280E9622A2C9901006F5F7A /* GradientWallpapersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1280E96B2A2C9901006F5F7A /* GradientWallpapersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1280E97C2A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapersUITests" */;
+			buildPhases = (
+				1280E9682A2C9901006F5F7A /* Sources */,
+				1280E9692A2C9901006F5F7A /* Frameworks */,
+				1280E96A2A2C9901006F5F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1280E96E2A2C9901006F5F7A /* PBXTargetDependency */,
+			);
+			name = GradientWallpapersUITests;
+			productName = GradientWallpapersUITests;
+			productReference = 1280E96C2A2C9901006F5F7A /* GradientWallpapersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1280E94A2A2C98FF006F5F7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1280E9512A2C98FF006F5F7A = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					1280E9612A2C9901006F5F7A = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 1280E9512A2C98FF006F5F7A;
+					};
+					1280E96B2A2C9901006F5F7A = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 1280E9512A2C98FF006F5F7A;
+					};
+				};
+			};
+			buildConfigurationList = 1280E94D2A2C98FF006F5F7A /* Build configuration list for PBXProject "GradientWallpapers" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1280E9492A2C98FF006F5F7A;
+			productRefGroup = 1280E9532A2C98FF006F5F7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1280E9512A2C98FF006F5F7A /* GradientWallpapers */,
+				1280E9612A2C9901006F5F7A /* GradientWallpapersTests */,
+				1280E96B2A2C9901006F5F7A /* GradientWallpapersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1280E9502A2C98FF006F5F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1280E95D2A2C9901006F5F7A /* Preview Assets.xcassets in Resources */,
+				1280E95A2A2C9901006F5F7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E9602A2C9901006F5F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E96A2A2C9901006F5F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1280E94E2A2C98FF006F5F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */,
+				127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */,
+				12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */,
+				1280E9582A2C98FF006F5F7A /* ContentView.swift in Sources */,
+				127F1DA92A34EE680070BEB9 /* Array+Additions.swift in Sources */,
+				12EFB00F2A2CA83C00A334C4 /* Ring.swift in Sources */,
+				1280E9562A2C98FF006F5F7A /* GradientWallpapersApp.swift in Sources */,
+				12EFB00A2A2C9F0C00A334C4 /* TimeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E95E2A2C9901006F5F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1280E9672A2C9901006F5F7A /* GradientWallpapersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1280E9682A2C9901006F5F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1280E9712A2C9901006F5F7A /* GradientWallpapersUITests.swift in Sources */,
+				1280E9732A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1280E9642A2C9901006F5F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1280E9512A2C98FF006F5F7A /* GradientWallpapers */;
+			targetProxy = 1280E9632A2C9901006F5F7A /* PBXContainerItemProxy */;
+		};
+		1280E96E2A2C9901006F5F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1280E9512A2C98FF006F5F7A /* GradientWallpapers */;
+			targetProxy = 1280E96D2A2C9901006F5F7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1280E9742A2C9901006F5F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1280E9752A2C9901006F5F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1280E9772A2C9901006F5F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GradientWallpapers/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1280E9782A2C9901006F5F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GradientWallpapers/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1280E97A2A2C9901006F5F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientWallpapers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GradientWallpapers";
+			};
+			name = Debug;
+		};
+		1280E97B2A2C9901006F5F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientWallpapers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GradientWallpapers";
+			};
+			name = Release;
+		};
+		1280E97D2A2C9901006F5F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GradientWallpapers;
+			};
+			name = Debug;
+		};
+		1280E97E2A2C9901006F5F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wani.GradientWallpapersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GradientWallpapers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1280E94D2A2C98FF006F5F7A /* Build configuration list for PBXProject "GradientWallpapers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1280E9742A2C9901006F5F7A /* Debug */,
+				1280E9752A2C9901006F5F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1280E9762A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1280E9772A2C9901006F5F7A /* Debug */,
+				1280E9782A2C9901006F5F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1280E9792A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1280E97A2A2C9901006F5F7A /* Debug */,
+				1280E97B2A2C9901006F5F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1280E97C2A2C9901006F5F7A /* Build configuration list for PBXNativeTarget "GradientWallpapersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1280E97D2A2C9901006F5F7A /* Debug */,
+				1280E97E2A2C9901006F5F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1280E94A2A2C98FF006F5F7A /* Project object */;
+}
