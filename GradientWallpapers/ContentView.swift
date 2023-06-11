@@ -13,19 +13,6 @@ enum AnimationProperties {
     static let blurRadius: CGFloat = 130
 }
 
-struct CirclesView: View {
-    @Binding var circles: [RingModel]
-
-    var body: some View {
-        ZStack {
-            ForEach(circles) { circle in
-                Ring(originOffset: circle.position)
-                .foregroundColor(circle.color)
-            }
-        }.blur(radius: AnimationProperties.blurRadius)
-    }
-}
-
 struct ContentView: View {
     @State private var timer = Timer.publish(every: AnimationProperties.timerDuration, on: .main, in: .common).autoconnect()
     @ObservedObject private var animator = RingEffect()
@@ -68,7 +55,7 @@ struct ContentView: View {
             timer = Timer.publish(every: AnimationProperties.timerDuration, on: .main, in: .common).autoconnect()
         }//.onChange(of: model.primaryColor, perform: updateColors())
         .onReceive(timer) { _ in
-            animator.changeColor(colors: model.all)
+            animator.changeColor(gradients: model.all, color: model.primaryColor)
             animateCircles()
         }.screenshotView { screenshotMaker in
             self.screenshotMaker = screenshotMaker

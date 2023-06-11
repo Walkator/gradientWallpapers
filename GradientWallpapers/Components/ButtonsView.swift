@@ -28,33 +28,64 @@ struct SheetView: View {
                         .padding(.leading, 24)
                         .padding(.trailing)
                     
-                    Slider(value: $slider[index], in: 0.1...2.5, onEditingChanged: { data in
-                        changeColor(index, brightness: slider[index])
-                    })
-                    .padding([.trailing], 24)
+                    HStack {
+                        Slider(value: $slider[index], in: 0.1...2.5, onEditingChanged: { data in
+                            changeColor(index, brightness: slider[index])
+                        })
+                        .padding([.trailing], index < 4 ? 24 : 0)
+                        
+                        if index >= 4 {
+                            Button(action: {
+                                removeGradient(index: index)
+                            }, label: {
+                                Image(systemName: "xmark")
+                                    .foregroundColor(.red)
+                            })
+                            .padding([.trailing], 24)
+                        }
+                    }
                 }
             }
             
             Spacer()
             
             Button(action: {
-                numOfSliders += 1
+                addNewGradient()
             }, label: {
                 Text("Add more rings")
             }).opacity(numOfSliders == 7 ? 0 : 100)
+        }
+        .onAppear() {
+            setLoadGradientSliders()
         }
     }
     
     private func changeColor(_ index: Int, brightness: Double) {
         if model.all.getElement(index) == nil {
-            model.all.append(model.primaryColor)
+            model.all.append(0.6)
         }
         
-        model.all[index] = Color(UIColor(model.primaryColor).colorWithBrightness(brightness))
+        model.all[index] = slider[index]
     }
     
-    private func setDefaultColor() {
+    private func setLoadGradientSliders() {
+        slider = model.all
+        numOfSliders = model.all.count
+    }
+    
+    private func addNewGradient() {
+        let sliderNewValue: Int = numOfSliders + 1
+        if sliderNewValue > model.all.count {
+            model.all.append(0.6)
+            slider.append(0.6)
+        }
         
+        numOfSliders = sliderNewValue
+    }
+    
+    private func removeGradient(index: Int) {
+        slider.remove(at: index)
+        model.all.remove(at: index)
     }
 }
 

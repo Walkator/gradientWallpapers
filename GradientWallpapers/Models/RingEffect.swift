@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class ColorsModel: ObservableObject {
-    @Published var all: [Color] = [Color(#colorLiteral(red: 0.003799867816, green: 0.01174801588, blue: 0.07808648795, alpha: 1)), Color(#colorLiteral(red: 0.147772789, green: 0.08009552211, blue: 0.3809506595, alpha: 1)), Color(#colorLiteral(red: 0.5622407794, green: 0.4161503613, blue: 0.9545945525, alpha: 1)), Color(#colorLiteral(red: 0.7909697294, green: 0.7202591896, blue: 0.9798423648, alpha: 1))]
+    @Published var all: [Double] = [0.4, 0.6, 0.8, 1, 2]
     @Published var primaryColor: Color = .purple
     @Published var backgroundColor: Color = .black
 }
@@ -27,7 +27,6 @@ final class RingModel: Identifiable {
 
 final class RingEffect: ObservableObject {
     @Published private(set) var circles: [RingModel] = []
-    @Published var model: ColorsModel?
     
     init() {
         let defaultColors: [Color] = [Color(#colorLiteral(red: 0.003799867816, green: 0.01174801588, blue: 0.07808648795, alpha: 1)), Color(#colorLiteral(red: 0.147772789, green: 0.08009552211, blue: 0.3809506595, alpha: 1)), Color(#colorLiteral(red: 0.5622407794, green: 0.4161503613, blue: 0.9545945525, alpha: 1)), Color(#colorLiteral(red: 0.7909697294, green: 0.7202591896, blue: 0.9798423648, alpha: 1))]
@@ -36,16 +35,11 @@ final class RingEffect: ObservableObject {
         })
     }
     
-    func changeColor(colors: [Color]) {
+    func changeColor(gradients: [Double], color: Color) {
         circles.removeAll()
-        circles = colors.map({ color in
-            RingModel(position: generateRandomPosition(), color: color)
+        circles = gradients.map({ gradient in
+            RingModel(position: generateRandomPosition(), color: Color(UIColor(color).colorWithBrightness(gradient)))
         })
-//        guard let colors = color else {
-//            circles.append(RingModel(position: RingEffect.generateRandomPosition(), color: .cyan))
-//            return
-//        }
-        //circles
     }
     
     func animate() {

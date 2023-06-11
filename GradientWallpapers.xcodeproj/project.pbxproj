@@ -16,6 +16,7 @@
 		1280E9672A2C9901006F5F7A /* GradientWallpapersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9662A2C9901006F5F7A /* GradientWallpapersTests.swift */; };
 		1280E9712A2C9901006F5F7A /* GradientWallpapersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9702A2C9901006F5F7A /* GradientWallpapersUITests.swift */; };
 		1280E9732A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9722A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift */; };
+		1295AB062A35FE2500B0C383 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1295AB052A35FE2500B0C383 /* CirclesView.swift */; };
 		12EFB00A2A2C9F0C00A334C4 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0092A2C9F0C00A334C4 /* TimeView.swift */; };
 		12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00C2A2CA81700A334C4 /* RingEffect.swift */; };
 		12EFB00F2A2CA83C00A334C4 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00E2A2CA83C00A334C4 /* Ring.swift */; };
@@ -52,6 +53,7 @@
 		1280E96C2A2C9901006F5F7A /* GradientWallpapersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientWallpapersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1280E9702A2C9901006F5F7A /* GradientWallpapersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersUITests.swift; sourceTree = "<group>"; };
 		1280E9722A2C9901006F5F7A /* GradientWallpapersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientWallpapersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1295AB052A35FE2500B0C383 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
 		12EFB0092A2C9F0C00A334C4 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		12EFB00C2A2CA81700A334C4 /* RingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingEffect.swift; sourceTree = "<group>"; };
 		12EFB00E2A2CA83C00A334C4 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		127F1DAC2A34EEE80070BEB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1295AB052A35FE2500B0C383 /* CirclesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */,
 				127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */,
+				1295AB062A35FE2500B0C383 /* CirclesView.swift in Sources */,
 				12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */,
 				1280E9582A2C98FF006F5F7A /* ContentView.swift in Sources */,
 				127F1DA92A34EE680070BEB9 /* Array+Additions.swift in Sources */,
