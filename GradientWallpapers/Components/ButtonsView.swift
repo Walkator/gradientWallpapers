@@ -7,88 +7,6 @@
 
 import SwiftUI
 
-struct SheetView: View {
-    @EnvironmentObject var model: ColorsModel
-    @State private var slider: [Double] = [0.2, 0.3, 0.4, 0.5, 0.6, 0, 0]
-    @State private var numOfSliders: Int = 4
-
-    var body: some View {
-        VStack {
-            Text("Edit gradient by rings")
-                .bold()
-                .padding(.top, 28)
-            
-            Spacer()
-            
-            ForEach((0...numOfSliders - 1).reversed(), id: \.self) { index in
-                HStack {
-                    Rectangle()
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(Color(UIColor(model.primaryColor).colorWithBrightness(slider[index])))
-                        .padding(.leading, 24)
-                        .padding(.trailing)
-                    
-                    HStack {
-                        Slider(value: $slider[index], in: 0.1...2.5, onEditingChanged: { data in
-                            changeColor(index, brightness: slider[index])
-                        })
-                        .padding([.trailing], index < 4 ? 24 : 0)
-                        
-                        if index >= 4 {
-                            Button(action: {
-                                removeGradient(index: index)
-                            }, label: {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.red)
-                            })
-                            .padding([.trailing], 24)
-                        }
-                    }
-                }
-            }
-            
-            Spacer()
-            
-            Button(action: {
-                addNewGradient()
-            }, label: {
-                Text("Add more rings")
-            }).opacity(numOfSliders == 7 ? 0 : 100)
-        }
-        .onAppear() {
-            setLoadGradientSliders()
-        }
-    }
-    
-    private func changeColor(_ index: Int, brightness: Double) {
-        if model.all.getElement(index) == nil {
-            model.all.append(0.6)
-        }
-        
-        model.all[index] = slider[index]
-    }
-    
-    private func setLoadGradientSliders() {
-        slider = model.all
-        numOfSliders = model.all.count
-    }
-    
-    private func addNewGradient() {
-        let sliderNewValue: Int = numOfSliders + 1
-        if sliderNewValue > model.all.count {
-            model.all.append(0.6)
-            slider.append(0.6)
-        }
-        
-        numOfSliders = sliderNewValue
-    }
-    
-    private func removeGradient(index: Int) {
-        slider.remove(at: index)
-        model.all.remove(at: index)
-    }
-}
-
 struct ButtonsView: View {
     @EnvironmentObject var model: ColorsModel
     @State private var colorSettings: Bool = false
@@ -111,7 +29,7 @@ struct ButtonsView: View {
                             .padding(.bottom, 8)
                     })
                     .sheet(isPresented: $showingSheet) {
-                        SheetView().presentationDetents([.height(332)]).environmentObject(model)
+                        AdjustGradientView().presentationDetents([.height(332)]).environmentObject(model)
                     }
                     
                     Image(systemName: "paintbrush.pointed.fill")
@@ -216,24 +134,61 @@ class ScreenshotMaker: UIView {
     /// Takes the screenshot of the superview of this superview
     /// - Returns: The UIImage with the screenshot of the view
     func screenshot() -> UIImage? {
-//        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
-//        guard let containerView = self.superview?.superview,
-//              let containerSuperview = containerView.superview else { return nil }
-//        let renderer = UIGraphicsImageRenderer(bounds: containerView.frame)
-//
-//        let screenshot = renderer.image { (context) in
-//            containerSuperview.layer.render(in: context.cgContext)
-//        }
-//        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
-        
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
-        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-          
+        guard let containerView = self.superview?.superview,
+              let containerSuperview = containerView.superview else { return nil }
         
-        return UIImage()
+        var newFrame: CGRect = containerView.frame
+        newFrame.size.width -= 100
+        newFrame.size.height -= 100
+        newFrame.origin.y = 50
+        newFrame.origin.x = 50
+        let renderer = UIGraphicsImageRenderer(bounds: newFrame)
+
+        let screenshot = renderer.image { (context) in
+            containerSuperview.layer.render(in: context.cgContext)
+        }
+        
+        
+        
+        
+        let inputImage = CIImage(cgImage: (screenshot.cgImage)!)
+        let filter = CIFilter(name: "CIGaussianBlur")
+        filter?.setValue(inputImage, forKey: "inputImage")
+        filter?.setValue(130, forKey: "inputRadius")
+        let blurred = filter?.outputImage
+
+        var newImageSize: CGRect = (blurred?.extent)!
+        newImageSize.origin.x = 0//+= (newImageSize.size.width - (screenshot.size.width)) / 2
+        newImageSize.origin.y = 0//+= (newImageSize.size.height - (screenshot.size.height)) / 2
+        newImageSize.size.width = UIScreen.main.bounds.width * 2.5 // = (screenshot.size)
+        newImageSize.size.height = UIScreen.main.bounds.height * 2.5
+
+        let resultImage: CIImage = filter?.value(forKey: "outputImage") as! CIImage
+        let context: CIContext = CIContext.init(options: nil)
+        let cgimg: CGImage = context.createCGImage(resultImage, from: newImageSize)!
+        let blurredImage: UIImage = UIImage.init(cgImage: cgimg)
+        //UIImageWriteToSavedPhotosAlbum(blurredImage, nil, nil, nil)
+        
+        //UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
+        
+        
+        
+        let currentFilter = CIFilter(name: "CIGaussianBlur")
+        let beginImage = CIImage(image: screenshot)
+         currentFilter!.setValue(beginImage, forKey: "inputImage")
+         currentFilter!.setValue(130, forKey: "inputRadius")
+
+         let cropFilter = CIFilter(name: "CICrop")
+         cropFilter!.setValue(currentFilter!.outputImage, forKey: kCIInputImageKey)
+         cropFilter!.setValue(CIVector(cgRect: beginImage!.extent), forKey: "inputRectangle")
+
+         let output = cropFilter!.outputImage
+         let cgimg2 = context.createCGImage(output!, from: output!.extent)
+         let processedImage = UIImage(cgImage: cgimg2!)
+        
+        UIImageWriteToSavedPhotosAlbum(processedImage, nil, nil, nil)
+        return processedImage //UIImage(ciImage: blurred!)
     }
 }
 

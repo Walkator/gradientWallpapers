@@ -16,7 +16,7 @@ class ColorsModel: ObservableObject {
 
 final class RingModel: Identifiable {
     let id = UUID().uuidString
-    let color: Color
+    var color: Color
     var position: CGPoint
     
     internal init(position: CGPoint, color: Color) {
@@ -36,10 +36,9 @@ final class RingEffect: ObservableObject {
     }
     
     func changeColor(gradients: [Double], color: Color) {
-        circles.removeAll()
-        circles = gradients.map({ gradient in
-            RingModel(position: generateRandomPosition(), color: Color(UIColor(color).colorWithBrightness(gradient)))
-        })
+        for (index, circle) in circles.enumerated() {
+            circle.color = Color(UIColor(color).colorWithBrightness(gradients[index]))
+        }
     }
     
     func animate() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122E91912A37355500DC9783 /* AdjustGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E91902A37355500DC9783 /* AdjustGradientView.swift */; };
 		127F1DA92A34EE680070BEB9 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F1DA82A34EE680070BEB9 /* Array+Additions.swift */; };
 		127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F1DAA2A34EE8A0070BEB9 /* UIColor+Additions.swift */; };
 		1280E9562A2C98FF006F5F7A /* GradientWallpapersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1280E9552A2C98FF006F5F7A /* GradientWallpapersApp.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		122E91902A37355500DC9783 /* AdjustGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustGradientView.swift; sourceTree = "<group>"; };
 		127F1DA82A34EE680070BEB9 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		127F1DAA2A34EE8A0070BEB9 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		1280E9522A2C98FF006F5F7A /* GradientWallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientWallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1295AB052A35FE2500B0C383 /* CirclesView.swift */,
+				122E91902A37355500DC9783 /* AdjustGradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */,
+				122E91912A37355500DC9783 /* AdjustGradientView.swift in Sources */,
 				127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */,
 				1295AB062A35FE2500B0C383 /* CirclesView.swift in Sources */,
 				12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */,

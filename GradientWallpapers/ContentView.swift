@@ -18,6 +18,7 @@ struct ContentView: View {
     @ObservedObject private var animator = RingEffect()
     @EnvironmentObject var model: ColorsModel
     @State var screenshotMaker: ScreenshotMaker?
+    @State private var imagen: UIImage?
 
     var body: some View {
         ZStack {
@@ -41,10 +42,12 @@ struct ContentView: View {
                 
                 ButtonsView(actionScreenshot: {
                     if let screenshotMaker = screenshotMaker {
-                        screenshotMaker.screenshot()
+                        imagen = screenshotMaker.screenshot()
                     }
                 }).environmentObject(model)
             }
+            
+      
         }
         .background(model.backgroundColor)
         .onDisappear {
@@ -53,11 +56,12 @@ struct ContentView: View {
         .onAppear {
             animateCircles()
             timer = Timer.publish(every: AnimationProperties.timerDuration, on: .main, in: .common).autoconnect()
-        }//.onChange(of: model.primaryColor, perform: updateColors())
+        }
         .onReceive(timer) { _ in
             animator.changeColor(gradients: model.all, color: model.primaryColor)
             animateCircles()
-        }.screenshotView { screenshotMaker in
+        }
+        .screenshotView { screenshotMaker in
             self.screenshotMaker = screenshotMaker
         }
     }
