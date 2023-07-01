@@ -17,37 +17,28 @@ struct ContentView: View {
     @State private var timer = Timer.publish(every: AnimationProperties.timerDuration, on: .main, in: .common).autoconnect()
     @ObservedObject private var animator = RingEffect()
     @EnvironmentObject var model: ColorsModel
-    @State var screenshotMaker: ScreenshotMaker?
-    @State private var imagen: UIImage?
+    @State private var viewIsHidden: Bool = false
 
     var body: some View {
         ZStack {
             CirclesView(circles: .constant(animator.circles))
+                .simultaneousGesture(
+                    TapGesture().onEnded {
+                        if viewIsHidden {
+                            viewIsHidden = false
+                        }
+                    }
+                )
             
             VStack {
-//                VStack {
-//                    HStack {
-//                        Image(systemName: "heart.fill")
-//                            .foregroundColor(.white)
-//                            .frame(width: 10, height: 10)
-//                        Spacer()
-//                    }.padding(.top, 25)
-//                    .padding(.leading, 30)
-//                    .edgesIgnoringSafeArea(.top)
-//                }
-                
                 TimeView()
                 
                 Spacer()
                 
-                ButtonsView(actionScreenshot: {
-                    if let screenshotMaker = screenshotMaker {
-                        imagen = screenshotMaker.screenshot()
-                    }
+                ActionsUIView(hiddeView: {
+                    viewIsHidden = true
                 }).environmentObject(model)
-            }
-            
-      
+            }.opacity(viewIsHidden ? 0 : 1)
         }
         .background(model.backgroundColor)
         .onDisappear {
@@ -58,11 +49,10 @@ struct ContentView: View {
             timer = Timer.publish(every: AnimationProperties.timerDuration, on: .main, in: .common).autoconnect()
         }
         .onReceive(timer) { _ in
-            animator.changeColor(gradients: model.all, color: model.primaryColor)
-            animateCircles()
-        }
-        .screenshotView { screenshotMaker in
-            self.screenshotMaker = screenshotMaker
+            animator.changeColor(gradients: model.all, color: model.primaryColor, modeRandom: model.randomMovement)
+            if model.randomMovement {
+                animateCircles()
+            }
         }
     }
     

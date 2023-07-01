@@ -21,7 +21,7 @@
 		12EFB00A2A2C9F0C00A334C4 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0092A2C9F0C00A334C4 /* TimeView.swift */; };
 		12EFB00D2A2CA81700A334C4 /* RingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00C2A2CA81700A334C4 /* RingEffect.swift */; };
 		12EFB00F2A2CA83C00A334C4 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB00E2A2CA83C00A334C4 /* Ring.swift */; };
-		12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */; };
+		12EFB0112A2CAAD800A334C4 /* ActionsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFB0102A2CAAD800A334C4 /* ActionsUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		12EFB0092A2C9F0C00A334C4 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		12EFB00C2A2CA81700A334C4 /* RingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingEffect.swift; sourceTree = "<group>"; };
 		12EFB00E2A2CA83C00A334C4 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
-		12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		12EFB0102A2CAAD800A334C4 /* ActionsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				12EFB0092A2C9F0C00A334C4 /* TimeView.swift */,
-				12EFB0102A2CAAD800A334C4 /* ButtonsView.swift */,
+				12EFB0102A2CAAD800A334C4 /* ActionsUIView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -199,6 +199,8 @@
 			dependencies = (
 			);
 			name = GradientWallpapers;
+			packageProductDependencies = (
+			);
 			productName = GradientWallpapers;
 			productReference = 1280E9522A2C98FF006F5F7A /* GradientWallpapers.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +273,8 @@
 				Base,
 			);
 			mainGroup = 1280E9492A2C98FF006F5F7A;
+			packageReferences = (
+			);
 			productRefGroup = 1280E9532A2C98FF006F5F7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12EFB0112A2CAAD800A334C4 /* ButtonsView.swift in Sources */,
+				12EFB0112A2CAAD800A334C4 /* ActionsUIView.swift in Sources */,
 				122E91912A37355500DC9783 /* AdjustGradientView.swift in Sources */,
 				127F1DAB2A34EE8A0070BEB9 /* UIColor+Additions.swift in Sources */,
 				1295AB062A35FE2500B0C383 /* CirclesView.swift in Sources */,
@@ -481,6 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GradientWallpapers/Preview Content\"";
+				DEVELOPMENT_TEAM = HZF7D969FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(MARKETING_VERSION)";
@@ -510,6 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GradientWallpapers/Preview Content\"";
+				DEVELOPMENT_TEAM = HZF7D969FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(MARKETING_VERSION)";

@@ -24,15 +24,16 @@ struct AdjustGradientView: View {
                 HStack {
                     Rectangle()
                         .frame(width: 25, height: 25)
-                        .foregroundColor(Color(UIColor(model.primaryColor).colorWithBrightness(slider[index])))
+                        .foregroundColor(Color(UIColor(model.primaryColor).colorWithBrightness(slider.getElement(index) ?? 0)))
                         .padding(.leading, 24)
                         .padding(.trailing)
                     
                     HStack {
                         Slider(value: $slider[index], in: 0.1...2.5, onEditingChanged: { data in
-                            changeColor(index, brightness: slider[index])
+                            changeColor(index, brightness: slider.getElement(0) ?? 0)
                         })
                         .padding([.trailing], index < 3 ? 24 : 0)
+                        .tint(model.primaryColor)
                         
                         if index >= 3 {
                             Button(action: {
@@ -49,11 +50,42 @@ struct AdjustGradientView: View {
             
             Spacer()
             
+            HStack {
+                Button(action: {
+                    model.randomMovement = true
+                }) {
+                    Text("Random Movements")
+                        
+                }.buttonStyle(.bordered)
+                .cornerRadius(50)
+                .tint(model.primaryColor)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50)
+                        .stroke(model.randomMovement ? model.primaryColor : .clear, lineWidth: 2)
+                )
+                
+                Button(action: {
+                    model.randomMovement = false
+                }) {
+                    Text("Static")
+                        
+                }.buttonStyle(.bordered)
+                .cornerRadius(50)
+                .tint(model.primaryColor)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50)
+                        .stroke(!model.randomMovement ? model.primaryColor : .clear, lineWidth: 2)
+                )
+            }
+            
+            Spacer()
+            
             Button(action: {
                 addNewGradient()
             }, label: {
                 Text("Add more rings")
             }).opacity(numOfSliders == 7 ? 0 : 100)
+                .tint(model.primaryColor)
         }
         .onAppear() {
             setLoadGradientSliders()
@@ -84,6 +116,7 @@ struct AdjustGradientView: View {
     }
     
     private func removeGradient(index: Int) {
+        guard slider.getElement(index) != nil else { return }
         slider.remove(at: index)
         model.all.remove(at: index)
         numOfSliders -= 1

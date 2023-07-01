@@ -10,18 +10,23 @@ import SwiftUI
 struct TimeView: View {
     var body: some View {
         VStack {
+            HStack {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.white)
+                    .frame(width: 10, height: 10)
+                Spacer()
+            }.padding(.top, 25)
+            .padding(.leading, 30)
+            .edgesIgnoringSafeArea(.top)
+            
             Text(getDate())
                 .font(.system(size: 24.0, weight: .semibold, design: .rounded))
-                .foregroundColor(.white).blendMode(.overlay)
-                .blendMode(.difference)
-                .blendMode(.hue)
+                .foregroundColor(.white)
                 .padding(.top, 20)
             
             Text(getTime())
                 .font(.system(size: 88.0,weight: .medium, design: .rounded))
-                .foregroundColor(.white).blendMode(.overlay)
-                .blendMode(.difference)
-                .blendMode(.hue)
+                .foregroundColor(.white)
         }
     }
     
