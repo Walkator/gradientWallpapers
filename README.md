@@ -1,5 +1,5 @@
 # GradientWallpapers
-<img src="images/gradientWallpapersIcon.png" width="48">
+<img src="images/gradientWallpapersIcon.png" width="100">
 
  Create Stunning Gradient Wallpapers for iOS
 
