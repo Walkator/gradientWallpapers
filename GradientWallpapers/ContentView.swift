@@ -53,7 +53,8 @@ struct ContentView: View {
             if model.randomMovement {
                 animateCircles()
             }
-        }
+        }.statusBar(hidden: viewIsHidden)
+        .persistentSystemOverlays(.hidden)
     }
     
     private func animateCircles() {

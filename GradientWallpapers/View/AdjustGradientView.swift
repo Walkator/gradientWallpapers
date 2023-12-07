@@ -29,7 +29,7 @@ struct AdjustGradientView: View {
                         .padding(.trailing)
                     
                     HStack {
-                        Slider(value: $slider[index], in: 0.1...2.5, onEditingChanged: { data in
+                        Slider(value: $slider[index], in: 0.1...2.8, onEditingChanged: { data in
                             changeColor(index, brightness: slider.getElement(0) ?? 0)
                         })
                         .padding([.trailing], index < 3 ? 24 : 0)
